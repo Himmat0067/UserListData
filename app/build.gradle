@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'com.himmat.userlistdata'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.himmat.userlistdata"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation Deps.coreKtx
+    implementation Deps.appCompat
+    implementation Deps.material
+    implementation Deps.constraintlayout
+    testImplementation Deps.junit
+    androidTestImplementation Deps.extJunit
+    androidTestImplementation Deps.espressoCore
+
+    implementation Deps.retrofit
+    implementation Deps.converterGson
+    implementation Deps.okhttp
+    implementation Deps.loggingIntercepter
+
+    implementation Deps.roomRunTime
+    implementation Deps.roomKtx
+    annotationProcessor(Deps.roomCompiler)
+    kapt Deps.kaptRoomCompiler
+
+
+    implementation Deps.hiltAndroid
+    kapt Deps.hiltCompiler
+
+    implementation Deps.viewModelKtx
+    implementation Deps.activityKtx
+
+    implementation Deps.coroutineAndroid
+    implementation Deps.coroutineCore
+
+    implementation Deps.circleimageview
+    implementation Deps.glide
+
+    implementation Deps.paging3
+    testImplementation Deps.mockitoCore
+    androidTestImplementation Deps.archcoreTest
+    androidTestImplementation Deps.roomTesting
+    androidTestImplementation Deps.coreTest
+
+}
