@@ -10,6 +10,15 @@ Create an application that shows user list with the pagination and cache respons
 ## Getting Started
 
 
+# UserListData App
+[Download the APK](https://drive.google.com/file/d/1oUYCaofrlsM1eJiEWn-EBtMqBY3VHtsu/view?usp=sharing)
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/Himmat0067/UserListData.git
+    ```
+
 
 2. **Open the Project in Android Studio:**
 
